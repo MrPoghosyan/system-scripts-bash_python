@@ -55,7 +55,7 @@ int main(int argc, char** argv)
 	{
 		fprintf(my_file, "#ifndef %s\n", unic_name);
 		fprintf(my_file, "# define %s\n\n", unic_name);
-		fprintf(my_file, "class %s\n{\n\t//\n};\n\n", class_name);
+		fprintf(my_file, "class %s\n{\n\t// Write your code here!\n};\n\n", class_name);
 		fprintf(my_file, "#endif /* %s */\n", unic_name);
 
 		fclose(my_file);
