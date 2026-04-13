@@ -55,7 +55,16 @@ int main(int argc, char** argv)
 	{
 		fprintf(my_file, "#ifndef %s\n", unic_name);
 		fprintf(my_file, "# define %s\n\n", unic_name);
-		fprintf(my_file, "class %s\n{\n\t// Write your code here!\n};\n\n", class_name);
+		fprintf(my_file, "class %s\n{\n", class_name);
+		/*****	 BODY START   *****/
+		fprintf(my_file, "\t// Write your code here!\n");
+		fprintf(my_file, "\tpublic:\n");
+		fprintf(my_file, "\t\t%s();\n", class_name);
+		fprintf(my_file, "\t\t%s(const %s& other);\n", class_name, class_name);
+		fprintf(my_file, "\t\t%s& operator=(const %s& other);\n", class_name, class_name);
+		fprintf(my_file, "\t\t~%s();\n", class_name);
+		/*****	 BODY END	*****/
+		fprintf(my_file, "};\n\n");
 		fprintf(my_file, "#endif /* %s */\n", unic_name);
 
 		fclose(my_file);

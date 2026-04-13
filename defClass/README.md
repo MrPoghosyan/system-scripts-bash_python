@@ -20,6 +20,14 @@ cc -Wall -Wextra -Werror defClass.c -o defClass
 * Դասի (class) կառուցվածքը
 * Պաշտպանություն գոյություն ունեցող ֆայլերը պատահական ջնջելուց (ստուգում է `access()` ֆունկցիայով)
 
+### Նոր կանոններ Orthodox Canonical Form
+Այսուհետ ձեր բոլոր դասերը նախագծված կլինեն Orthodox Canonical ձևով,
+եթե այլ կերպ հստակ նշված չլինի։ Այնուհետև դրանք կիրականացնեն ստորև նշված չորս պարտադիր անդամ ֆունկցիաները՝
+* Լռելյայն կոնստրուկտոր
+* Պատճենման կոնստրուկտոր
+* Պատճենման վերագրման օպերատոր
+* Դեստրուկտոր
+
 ### Ինչպե՞ս օգտագործել ցանկացած տեղից (Installation)
 
 Որպեսզի կարողանաք կանչել `defClass` հրամանը ցանկացած թղթապանակից, ընտրեք տարբերակներից մեկը․
@@ -65,6 +73,15 @@ This utility automates the creation of C++ header files. It generates a `.hpp` f
 * Header Guards (`#ifndef`, `#define`) with the filename converted to uppercase
 * Basic class structure
 * Overwrite protection (checks if the file exists using `access()` before creating)
+
+### New rules Orthodox Canonical Form
+From now on, all your classes must be designed in the Orthodox Canonical Form,
+unless explicitly stated otherwise. They will then implement the four required member
+functions below:
+* Default constructor
+* Copy constructor
+* Copy assignment operator
+* Destructor
 
 ### How to install it globally
 
